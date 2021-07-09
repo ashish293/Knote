@@ -120,6 +120,9 @@ body {
 	.note {
 		width: 45%;
 	}
+	.logo span {
+		line-height: 0.8;
+	}
 }
 @media (max-width: 640px) {
 	.note {
