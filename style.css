@@ -23,7 +23,6 @@ body {
 }
 .logo span {
 	font-family: "Pacifico", cursive;
-	line-height: 0.8;
 }
 .logo i {
 	font-size: 1.8rem;
@@ -114,6 +113,16 @@ body {
 
 @media (max-width: 1150px) {
 	.note {
-		width: 30%;
+		width: 28%;
+	}
+}
+@media (max-width: 768px) {
+	.note {
+		width: 45%;
+	}
+}
+@media (max-width: 640px) {
+	.note {
+		width: 90%;
 	}
 }
