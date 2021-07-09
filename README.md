@@ -5,4 +5,4 @@
 It use your <strong>local storage</strong> to store your data.</p>
 
 
-link- <a href="https://ashish293.github.io/Knote/"> click here</a>
+Link- <a href="https://ashish293.github.io/Knote/"> click here</a>
