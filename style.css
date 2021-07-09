@@ -95,8 +95,9 @@ body {
 	font-weight: 300;
 	background-color: white;
 	margin: 1rem;
+	box-shadow: 2px 2px 4px #c9c9c9;
+	border-radius: 4px;
 }
-.note-div,
 .note-txt {
 	overflow-y: auto;
 	padding: 10px;
@@ -104,19 +105,11 @@ body {
 	height: 84%;
 	font-size: 1rem;
 	line-height: 1.4;
-}
-
-.note-txt {
 	resize: none;
 	outline: none;
 	border: none;
-	/* font-weight: 300; */
 	width: 100%;
 	font-family: "Roboto", sans-serif;
-}
-
-.hidden {
-	display: none;
 }
 
 @media (max-width: 1150px) {

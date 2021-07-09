@@ -19,26 +19,23 @@ const createNote = (text = "") => {
 	    <button class="btn edit" "><i class="fas"></i></button>
 	    <button class="btn delete" " ><i class="fas fa-trash-alt"></i></button>
 	  </div>
-    <div class="note-div ${text ? "" : "hidden"}">${text}</div>
-	  <textarea class=" note-txt ${text ? "hidden" : ""} " ></textarea>
+	  <textarea class=" note-txt" ${text ? "readonly" : ""} >${text}</textarea>
   `;
 	note.insertAdjacentHTML("afterbegin", htmlData);
 	container.appendChild(note);
 
 	const editButton = note.querySelector(".edit");
 	const deleteBtn = note.querySelector(".delete");
-	const noteDiv = note.querySelector(".note-div");
 	const noteText = note.querySelector(".note-txt");
 
-	//If creating new note focus textarea
+	//First view deal with focus and edit icon
 	if (!text) {
 		noteText.focus();
 		editButton.firstElementChild.classList.add("fa-save");
 	} else {
 		editButton.firstElementChild.classList.add("fa-edit");
 	}
-	noteDiv.innerHTML = text;
-	noteText.value = text;
+
 	//Deleting the note
 	deleteBtn.addEventListener("click", () => {
 		note.remove();
@@ -47,23 +44,18 @@ const createNote = (text = "") => {
 
 	//editButton
 	editButton.addEventListener("click", () => {
-		noteDiv.classList.toggle("hidden");
-		noteText.classList.toggle("hidden");
+		noteText.toggleAttribute("readonly");
 		noteText.focus();
 		editButton.firstElementChild.classList.toggle("fa-save");
 		editButton.firstElementChild.classList.toggle("fa-edit");
 	});
 
-	noteText.addEventListener("change", () => {
-		noteDiv.innerHTML = noteText.value;
-		updateLSData();
-	});
+	noteText.addEventListener("change", updateLSData);
 };
 
 const notes = localStorage.getItem("notes");
 if (notes) {
 	const notes = JSON.parse(localStorage.getItem("notes"));
-	console.log(notes);
 	notes.forEach((element) => {
 		createNote(element);
 	});
