@@ -7,7 +7,7 @@
 	<strong>local storage</strong> to store your data.
 </p>
 
-Link- <a href="https://ashish293.github.io/Knote/"> click here</a> <br /><br />
+<h2>Link- <a href="https://ashish293.github.io/Knote/"> click here</a></h2> <br /><br />
 
 <div>
 	<img width="600px" src="images/Knote-desktop.png" alt="" /><br />
